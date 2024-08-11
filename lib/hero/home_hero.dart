@@ -1,3 +1,4 @@
+import 'package:animatsiyalar/helpers/custom_route.dart';
 import 'package:animatsiyalar/hero/second_hero.dart';
 import 'package:flutter/material.dart';
 
@@ -10,11 +11,7 @@ class HomeHero extends StatelessWidget {
       body: Center(
         child: InkWell(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(
-              builder: (context) {
-                return SecondHero();
-              },
-            ));
+            Navigator.push(context, CustomRoute(page: SecondHero()));
           },
           child: Hero(
             tag: "rasm",

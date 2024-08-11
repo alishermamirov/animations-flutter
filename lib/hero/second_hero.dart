@@ -6,8 +6,12 @@ class SecondHero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Hero"),
+      ),
       body: Hero(
-        tag: "rasm",
+        // tag: "rasm",
+        tag: "ras1",
         child: FadeInImage(
           width: MediaQuery.of(context).size.width,
           height: 250,

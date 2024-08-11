@@ -1,3 +1,4 @@
+import 'package:animatsiyalar/helpers/custom_route.dart';
 import 'package:animatsiyalar/hero/home_hero.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        pageTransitionsTheme: PageTransitionsTheme(
+          builders: {
+            TargetPlatform.android: customPagetr(),
+          },
+        ),
+      ),
       home: HomeHero(),
     );
   }

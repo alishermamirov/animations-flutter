@@ -1,5 +1,6 @@
 import 'package:animatsiyalar/helpers/custom_route.dart';
 import 'package:animatsiyalar/hero/second_hero.dart';
+import 'package:animatsiyalar/hero/third_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeHero extends StatelessWidget {
@@ -11,9 +12,9 @@ class HomeHero extends StatelessWidget {
       body: Center(
         child: InkWell(
           onTap: () {
-            Navigator.push(context, CustomRoute(page: SecondHero()));
+            Navigator.push(context, CustomRoute(page: const SecondHero()));
           },
-          child: Hero(
+          child: const Hero(
             tag: "rasm",
             child: FadeInImage(
               width: 250,
@@ -26,6 +27,11 @@ class HomeHero extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const ThirdScreen(),
+        ));
+      }),
     );
   }
 }
